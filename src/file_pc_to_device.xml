@@ -1,0 +1,11 @@
+<source lang="HTML"><?xml version="1.0" encoding="UTF-8" ?>
+    <EventGhost Version="1630">
+	<Macro Name="Отправить Файл" Expanded="True">
+	    <Event Name="Main.SentFromExplorer.File" />
+	    <Action>
+		AutoRemote.SendMessage(u'Android Device', u'', u'', u'files', u'', u'', u'', '', u'{eg.event.payload[0]}')
+	    </Action>
+	</Macro>
+    </EventGhost>
+</source>
+

@@ -1,0 +1,14 @@
+<source lang="HTML"><?xml version="1.0" encoding="UTF-8" ?>
+    <EventGhost Version="1669">
+	<Macro Name="Incoming Files" Expanded="True">
+	    <Event Name="AutoRemote.Message.incoming" />
+	    <Action>
+		EventGhost.PythonCommand(u'print eg.event.payload.files[0]')
+	    </Action>
+	    <Action>
+		System.Execute(u'C:\\Windows\\explorer.exe', u'/select,{eg.event.payload.files[0]}', 0, False, 2, u'', False, False)
+	    </Action>
+	</Macro>
+    </EventGhost>
+</source>
+

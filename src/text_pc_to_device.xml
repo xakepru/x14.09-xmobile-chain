@@ -1,0 +1,12 @@
+<source lang="HTML">
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <EventGhost Version="1669">
+	<Macro Name="Send clipboard to my device" Expanded="True">
+	    <Event Name="Keyboard.Ctrl+Alt+V" />
+	    <Action>
+		AutoRemote.SendMessage(u'My Device', u'URL', u'device', u'copy=:={eg.WinApi.Clipboard.GetClipboardText()}', u'', u'', u'', '', u'')
+	    </Action>
+	</Macro>
+    </EventGhost>
+</source>
+

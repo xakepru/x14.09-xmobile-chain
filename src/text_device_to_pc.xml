@@ -1,0 +1,11 @@
+<source lang="HTML"><?xml version="1.0" encoding="UTF-8" ?>
+    <EventGhost Version="1669">
+	<Macro Name="Copy to Clipboard" Expanded="True">
+	    <Event Name="AutoRemote.Message.copy" />
+	    <Action>
+		EventGhost.PythonCommand(u'eg.WinApi.Clipboard.SetClipboardText(eg.event.payload.arcomm)')
+	    </Action>
+	</Macro>
+    </EventGhost>
+</source>
+
